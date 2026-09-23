@@ -1,0 +1,29 @@
+{
+  "name": "disaster-command",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npm run test:transfer && npm run test:split && npm run test:roadblock && npm run test:multiblock && npm run test:closedloop && npm run test:supply && npm run test:repair && npm run test:replay",
+    "test:transfer": "esbuild test-transfer.mjs --bundle --outfile=node_modules/.cache/test-transfer.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-transfer.bundle.mjs",
+    "test:split": "esbuild test-split.mjs --bundle --outfile=node_modules/.cache/test-split.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-split.bundle.mjs",
+    "test:roadblock": "esbuild test-roadblock.mjs --bundle --outfile=node_modules/.cache/test-roadblock.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-roadblock.bundle.mjs",
+    "test:multiblock": "esbuild test-multiblock.mjs --bundle --outfile=node_modules/.cache/test-multiblock.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-multiblock.bundle.mjs",
+    "test:closedloop": "esbuild test-closedloop.mjs --bundle --outfile=node_modules/.cache/test-closedloop.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-closedloop.bundle.mjs",
+    "test:supply": "esbuild test-supply.mjs --bundle --outfile=node_modules/.cache/test-supply.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-supply.bundle.mjs",
+    "test:repair": "esbuild test-repair.mjs --bundle --outfile=node_modules/.cache/test-repair.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-repair.bundle.mjs",
+    "test:replay": "esbuild test-replay.mjs --bundle --outfile=node_modules/.cache/test-replay.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-replay.bundle.mjs"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.8"
+  }
+}
