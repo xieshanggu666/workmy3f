@@ -15,7 +15,12 @@
     "test:closedloop": "esbuild test-closedloop.mjs --bundle --outfile=node_modules/.cache/test-closedloop.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-closedloop.bundle.mjs",
     "test:supply": "esbuild test-supply.mjs --bundle --outfile=node_modules/.cache/test-supply.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-supply.bundle.mjs",
     "test:repair": "esbuild test-repair.mjs --bundle --outfile=node_modules/.cache/test-repair.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-repair.bundle.mjs",
-    "test:replay": "esbuild test-replay.mjs --bundle --outfile=node_modules/.cache/test-replay.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-replay.bundle.mjs"
+    "test:replay": "esbuild test-replay.mjs --bundle --outfile=node_modules/.cache/test-replay.bundle.mjs --format=esm --platform=node --alias:@=./src --log-level=warning && node node_modules/.cache/test-replay.bundle.mjs",
+    "services": "node services/start-all.js",
+    "test:services": "node services/test/integration.test.mjs",
+    "test:domain": "node services/test/domain.test.mjs",
+    "services:up": "bash services/dev-up.sh",
+    "services:down": "bash services/dev-down.sh"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",

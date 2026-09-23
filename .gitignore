@@ -30,3 +30,7 @@ pnpm-debug.log*
 # 系统文件
 .DS_Store
 Thumbs.db
+
+# 微服务运行时数据（事件日志 / WAL / 检查点）
+.data/
+services/**/*.log
