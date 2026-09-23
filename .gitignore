@@ -5,6 +5,9 @@ node_modules/
 dist/
 dist-ssr/
 
+# 三服务运行数据（事件日志 / outbox / 死信）
+data/
+
 # 本地环境变量 —— 高德 key 等敏感配置永不入库。# 请自行复制 .env.example 生成 .env
 .env
 .env.local
